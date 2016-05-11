@@ -1,4 +1,5 @@
-# Clicker-Monsters
-# Version Pre-Alpha ver0.0.2
+# Clicker-Monsters # Actualización - Pre-Alpha ver0.0.2
 
-Web: http://beta.clickermonsters.es/
+Bienvenidos Guerreros, hoy os traigo la ultima versión recien salida del horno. En esta versión nos hemos centrado en el HUB, ya que era un desastre. 
+
+--HUB--

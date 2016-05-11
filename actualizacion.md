@@ -1,4 +1,4 @@
-# Clicker-Monsters # Actualización - Pre-Alpha ver0.0.2
+# Clicker-Monsters -- Actualización - Pre-Alpha ver0.0.2
 
 Bienvenidos Guerreros, hoy os traigo la ultima versión recien salida del horno. En esta versión nos hemos centrado en el HUB, ya que era un desastre. 
 
@@ -15,10 +15,10 @@ Bienvenidos Guerreros, hoy os traigo la ultima versión recien salida del horno.
   
   - Al acceder por primera vez, debes de poner el nombre.
 
-- Mejoras
+- Mejoras 
   -Se ha añadido toda clase de información de las mejoras(Precio, Info y cantidad de mejora compradas.).
 
-- Estadisticas
+- Estadisticas 
   -Se ha añadido informacion general del juego.
 
 - Proxima actualización:

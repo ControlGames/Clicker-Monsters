@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+		<meta charset="UTF-8">
+		
+		<title>| ClickerMonsters | · | v0.0.1 |</title>
+		<link rel="stylesheet" href="recursos/css/bootstrap.min.css">
+		<link rel="stylesheet" href="recursos/css/estilo.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Germania+One">
+	</head>
+	<body>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70036203-2', 'auto');
+  ga('send', 'pageview');
+</script>
+		<div class="modal fade" id="onLoadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" onmousedown='return false;'>&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Bienvenido a Clicker Monsters</h4>
+					</div>
+					<div class="modal-body">
+						<p>Elimina a los monstruos sin perder tu vida. ¡Solo un autentico guerrero podra hacerlo!</p>
+						<p>Clicker Monsters esta en la version: Pre-Alpha ver0.0.2</p>
+						<p>Para ver los cambios de la ultima actualizacion, <a href="http://clickermonsters.es/blog.html">CLICK AQUI</a>.</p>
+						<h3>Tu nombre:</h3>
+						<input class="form-control" id="nombre" type="text">
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="modalClose" class="btn btn-success" data-dismiss="modal" onmousedown='return false;'>
+						<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+						</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true" onmousedown='return false;'>
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row" style="height: 20px;"></div>
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="page-header text-center" style="font-family: 'Germania One', cursive;"><span class="h1">Clicker Monsters</span> <span class="h4 text-muted">Pre-Alpha ver0.0.2</span></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+						<li class="active"><a href="#seccionA">Clicker Monsters</a></li>
+						<li><a href="#seccionB">Mejoras</a></li>
+						<li><a href="#seccionC">Estadisticas</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="seccionA">
+							<div class="row" style="height: 10px;"></div>
+							<div class="col-xs-6">
+								<div class="panel panel-default">
+									<div class="panel-heading panel-heading-mejora">
+										<h3 class="panel-title h3" style="font-family: 'Germania One', cursive;">
+										<img src="recursos/imagenes/histogram.png" style="height: 30px;"></img> Perfil</h3>
+									</div>
+									<div class="panel-body h2">
+										<div class="col-xs-12">
+											<div class="col-xs-6">
+												<span style="height: 5px;" class="label label1">Vida: <class="h1" id="vida">100</span>
+												<br/>
+												<br/>
+												<div class="progress">
+													<div class="progress-bar barra-vida progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"></div>
+												</div>
+												<span class="label label1">Nivel: <class="h1" id="nivel"> 1</span><span style="margin-left:5px" class="label label1">Experiencia: <class="h1" id="total_exp">0</span>
+												<br/>
+												<br/>
+												<div class="progress">
+													<div class="progress-bar barra-exp progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"></div>
+												</div>
+												<span style="height: 5px;" class="label label1">Daño: <class="h1" id="daño">10</span>
+												<br/>
+												<br/>
+												<span style="height: 5px;" class="label label1">Oro: <class="h1" id="total_oro">0</span> <span style="height: 5px;" class="label label1">Drop de Oro: <class="h1" id="drop_oro">20</span>
+												<br/>
+												<br/>
+												<br/>
+												<br/>
+												<br/>
+												<span style="height: 5px;" class="label label1">Vida Monstruo: <class="h1" id="vida_monstruo">100</span>
+												<br/>
+												<br/>
+												<span style="height: 5px;" class="label label1">Daño Monstruo: <class="h1" id="daño_monstruo">10</span>
+											</div>	
+											<div class="col-xs-6">
+												<span style="height: 5px;" class="label label1">Mana: <class="h1" id="mana">100</span>
+												<br/>
+												<br/>
+												<div class="progress">
+													<div class="progress-bar barra-mana progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"></div>
+												</div>
+												<span style="height: 5px;" class="label label1">Experencia necesaria: <class="h1" id="exp_necesitas"> 100</span>
+												<br/>
+												<br/>
+												<span style="height: 5px;" class="label label1">Monstruos assesinados: <class="h1" id="monstruos_muertos"> 0</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6" >
+								<div class="panel panel-default">
+									<div class="panel-heading panel-heading-mejora">
+										<h3 class="panel-title h3" style="font-family: 'Germania One', cursive;">
+										<img src="recursos/imagenes/biceps.png" style="height: 30px;"></img> Seccion de Clicks</h3>
+									</div>
+									<div class="panel-body"> 
+										<button class="btn btn-lg btn-success" onclick="clickOro()">Prueba EXP</button>
+										<button style="margin-left:5px" id="click" type="button" class="btn btn-primary btn-lg btn2">¡Click aqui!</button>
+										<button style="margin-left:5px" id="pocionDeVida" type="button" class="btn btn-lg btn-success">Pocion Vida</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="seccionB" class="tab-pane">
+						<div class="row" style="height: 10px;"></div>
+							<div class="col-xs-12">
+								<div class="panel panel-default">
+									<div class="panel-heading panel-heading-mejora">
+										<h3 class="panel-title h3" style="font-family: 'Germania One', cursive;">
+										<img src="recursos/imagenes/plain-arrow.png" style="height: 30px;"></img> Mejoras</h3>
+									</div>
+									<div class="panel-body">
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th class="text-center">Comprar Mejora</th>
+													<th class="text-center">Precio</th>
+													<th class="text-center">Info</th>
+													<th class="text-center">Mejoras Compradas</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="text-center"><button onclick="mejorarDropOro()" type="button" class="btn btn-primary btn-lg btn2">Drop de Oro</button></td>
+													<td class="text-center"><span id="mejorarDropOroCost">11</span></td>
+													<td class="text-center">Mejora el drop de ORO</td>
+													<td class="text-center"><span id="mejorasDropOroComprados">0</span></td>
+												</tr>
+												<tr>
+													<td class="text-center"><button onclick="mejorarDropExp()" type="button" class="btn btn-primary btn-lg btn2">Drop de EXP</button></td>
+													<td class="text-center"><span id="mejorarDropExpCost">11</span></td>
+													<td class="text-center">Mejora el drop de EXP</td>
+													<td class="text-center"><span id="mejorasDropExpComprados">0</span></td>
+												</tr>
+												<tr>
+													<td class="text-center"><button id="mejorarDaño" type="button" class="btn btn-primary btn-lg btn2">Daño de Ataque</button></td>
+													<td class="text-center"><span id="mejorarDropDañoCost">11</span></td>
+													<td class="text-center">Mejora tu Daño dde Ataque</td>
+													<td class="text-center"><span id="mejorasDañoComprados">0</span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="seccionC" class="tab-pane">
+						<div class="row" style="height: 10px;"></div>
+							<div class="col-xs-12">
+								<div class="panel panel-default">
+									<div class="panel-heading panel-heading-mejora">
+										<h3 class="panel-title h3" style="font-family: 'Germania One', cursive;">
+										<img src="recursos/imagenes/histogram.png" style="height: 30px;"></img> Estadisticas</h3>
+									</div>
+									<div class="panel-body">
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th class="text-center">Estadisticas</th>
+													<th class="text-center">Globales</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="success text-center">Nombre</a></td>
+													<td class="text-center"><span id="nombre2"></span></td>
+												</tr>
+												<tr>
+													<td class="text-center">Total clicks</td>
+													<td class="text-center"><span id="total_clicks"></span></td>
+												</tr>
+												<tr>
+													<td class="text-center">Total Oro</td>
+													<td class="text-center"><span id="total_oro_siempre"></span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Carga de scripts -->
+		<script type="text/javascript" src="recursos/js/jquery.js"></script> 
+		<script type="text/javascript" src="recursos/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="recursos/js/sistema2.js"></script>
+		<script type="text/javascript" src="recursos/js/mejoras.js"></script>
+		<script type="text/javascript" src="recursos/js/dropdown.js"></script>
+	</body>
+</html>
